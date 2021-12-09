@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Signup EJS </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+       <style>
+            body{
+            background-color: burlywood;
+          }
+            header{
+              height: 100px;
+            }
+           footer{
+             height: 120px;
+           }
+            .card{
+              height: auto;
+              margin-bottom: 20px;
+              background-color:lightgoldenrodyellow;
+              border-radius: 5%;
+              position: relative;
+            }
+            .card h2{
+              text-align: center;
+              padding-top: 10px;
+            }
+              
+          </style>
+    </head>
+    <body>
+      <header class="container jumbotron">
+        <%- include('../views/header'); %>
+      </header>
+       <div class="container card">
+         <h2>SignUp Form</h2>
+         <form action="/register" method="post">
+          <div class="form-group">
+            <%   if(typeof message != "undefined" && message) { %>
+
+              <div class="mt-5 mb-3">
+      
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      
+                  <strong><%=  message  %></strong>
+      
+                  
+      
+                </div>
+      
+              </div> 
+      
+            <% }    %>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">First Name</label>
+            <input type="text" class="form-control" name="Firstname"  placeholder="Enter First Name" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Last Name</label>
+            <input type="text" class="form-control" name="Lastname"  placeholder="Enter Last Name" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="email" class="form-control" name="username"  placeholder="Enter Last Name" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+          </div>
+          <div class="form-group">
+          <label for="exampleInputPassword2">Confirm Password</label>
+            <input type="password" name="confirmPassword" class="form-control"  placeholder="Confirm Password" required>
+          </div>
+          <center><button type="submit" class="btn btn-primary">Submit</button></center>
+        </form>
+       </div> 
+    <footer class="container jumbotron">
+      <%- include('../views/footer'); %>
+    </footer>
+      </body>
+</html>

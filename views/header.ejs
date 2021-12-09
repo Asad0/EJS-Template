@@ -1,0 +1,47 @@
+<style>
+    ul{
+        text-align: center;
+        
+    }
+    li{
+        display: inline-block;
+        padding-left: 10px;
+        
+                
+    }
+    a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: -5;
+  left: 0;
+  
+  background-color: #000;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+a:hover::before {
+  transform: scaleX(1);
+}
+
+</style>
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/login">Login</a></li>
+    <li><a href="/signup">Signup</a></li>
+    <li><a href="/logout">Logout</a></li>
+</ul>

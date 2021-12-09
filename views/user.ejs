@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>EJS-user </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+          body{
+            background-color: burlywood;
+          }
+          header{
+            height: 100px;
+          }
+          footer{
+            position: absolute;
+            left: 120px;
+            bottom: 0;
+          }
+        </style>
+      </head>
+    
+    
+    <body>
+      <header class="container jumbotron">
+        <%- include('../views/header/'); %>
+      </header>
+        <h1 class="container"><strong><%=  message  %></strong></h1>
+    <footer class="container jumbotron">
+      <%- include('../views/footer'); %>
+    </footer>
+      </body>
+</html>
